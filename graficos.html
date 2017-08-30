@@ -148,7 +148,8 @@
       <script data-plotly="7RodrigoAugusto:2" sharekey-plotly="IqoXrUJKtj9N0559DOEhwJ" src="https://plot.ly/embed.js" async></script>
   </div>
 
-
+ <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>	
+	    
 </div>
 
   </div>
@@ -228,8 +229,40 @@
 
 
       </script>
-
-
+	  
+<script>
+ $(function () { 
+    var myChart = Highcharts.chart('container', {
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Mulheres x Homens - Concluintes'
+        },
+        xAxis: {
+            categories: ['2007', '2008', '2008','2009','2010','2011']
+        },
+        yAxis: {
+            title: {
+                text: 'Teste'
+            }
+        },
+        series: [{
+            name: 'Mulheres',
+            data: [29, 48, 85, 273, 1177]
+            animation: {
+                    duration: 1000
+            }
+        }, {
+            name: 'Homens',
+            data: [10, 15, 67, 169, 623]
+            animation: {
+                    duration: 1000
+                }
+        }]
+    });
+});
+</script>
 
 
   </body>
