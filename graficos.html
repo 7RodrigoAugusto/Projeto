@@ -1,235 +1,117 @@
 <html>
   <head>
     <meta charset="utf-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Página web do projeto de gênero UFPB 2017">
+    <meta name="keywords" content="data visualization, d3, javascript, UFPB">
+    <meta name="author" content="Rodrigo Sarmento">
+  
     <title> Projeto </title>
     
-<!-- Link direto para meu projeto no github -->
-    <link rel="stylesheet" type="text/css" href="semantic/out/semantic.min.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <!-- Link direto para meu projeto no github -->
+    <link rel="stylesheet" type="text/css" href="lib/semantic/out/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
       crossorigin="anonymous"></script>
-	  
-<!--- Semantic -->
-      <script src="semantic/out/semantic.min.js"></script>
+    
+      <!-- Semantic -->
+      <script src="lib/semantic/out/semantic.min.js"></script>
 
-<!--- D3 -->
+      <!-- Jquery 
+      <script src="lib/jquery-3.2.1.min.js"></script>
+      -->
+
+      <!-- D3 -->
       <script src="https://d3js.org/d3.v4.min.js"></script>
-	  
-      <style type="text/css">
-      body {
-        background-color: #FFFFFF;
-      }
-      .ui.menu .item img.logo {
-        margin-right: 1.5em;
-      }
-      .main.container {
-        margin-top: 7em;
-      }
-      .wireframe {
-        margin-top: 2em;
-      }
-      .ui.footer.segment {
-        margin: 5em 0em 0em;
-        padding: 5em 0em;
-      }
-    </style>
 
-    <!-- Example Javascript -->
-    <script>
-    $(document)
-      .ready(function() {
-        $('.ui.menu .ui.dropdown').dropdown({
-          on: 'hover'
-        });
-        $('.ui.menu a.item')
-          .on('click', function() {
-              $(this)
-              .addClass('active')
-              .siblings()
-              .removeClass('active')
-            ;
-          })
-        ;
-      })
-    ;
-    </script>
+      <!-- Meus scripts -->
+      <script src="lib/my_script.js"></script>
+      <script src="lib/readyScript.js"</script>
+      <script src="lib/script_fluxograma.js"></script> 
+      <script src="lib/script_d3CSV.js"></script>  
+      <script src="lib/script_search.js"></script>
 
-      <!-- HEADER -->
+
+
+  </head>
+
+  <body style = "width:100%; height:100%;">
+    <!-- HEADER -->
     <div class="ui fixed red inverted menu">
-    <div class="ui container">
-      <a href="http://www.ufpb.br" class="ui mini image"><img src="image/ufpb_logo.png"></a>
-      <a href="index.html" class="item">Página Inicial</a>
-      <a href="graficos.html" class="transition item"><i class="area chart icon"></i></a> <!-- Destaques da pesquisa -->
-      <a href="mulheres.html" class="transition item"><i class="female icon"></i></a>     <!-- Destaques dos mulheres-->
-      <a href="homens.html" class="transition item"><i class="male icon"></i></a>         <!-- Destaques dos homens  -->
-      <div class="ui simple dropdown item">
-        Extra <i class="dropdown icon"></i>
-        <div class="menu">
-          <a class="item" href="#">Universidade</a>
-          <a class="item" href="#">Centro de Informática</a>
-          <div class="divider"></div>
-          <div class="header">Mulheres na Pesquisa</div>
-          <div class="item">
-            <i class="dropdown icon"></i>
-            Sub Menu
-            <div class="menu">
-              <a class="item" href="#">Pesquisadoras Centro de Informática</a>
-              <a class="transition item" href="historia.html">História</a>
+      <div class="ui container">
+        <a href="http://www.ufpb.br" class="ui mini image"><img src="image/ufpb_logo.png"></a>
+        <a href="index.html" class="item">Página Inicial</a>
+        <a href="graficos.html" class="transition item"><i class="area chart icon"></i></a> <!-- Destaques da pesquisa -->
+        <a href="mulheres.html" class="transition item"><i class="female icon"></i></a>     <!-- Destaques dos mulheres-->
+        <a href="homens.html" class="transition item"><i class="male icon"></i></a>         <!-- Destaques dos homens  -->
+        <div class="ui simple dropdown item"> Extra <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="item" href="#">Universidade</a>
+            <a class="item" href="#">Centro de Informática</a>
+            <div class="divider"></div>
+            <div class="header">Mulheres na Pesquisa</div>
+            <div class="item">
+              <i class="dropdown icon"></i>
+              Sub Menu
+              <div class="menu">
+                <a class="item" href="#">Pesquisadoras Centro de Informática</a>
+                <a class="transition item" href="historia.html">História</a>
+              </div>
             </div>
+            <a class="transition item" href="envolvidos.html">Envolvidos</a>            <!-- Alunos envolvidos na pesquisa  -->
           </div>
-          <a class="transition item" href="envolvidos.html">Envolvidos</a>            <!-- Alunos envolvidos na pesquisa  -->
         </div>
-      </div>
-      <div class="center menu">
+        <div class="center menu">
           <div class="item">
-              <div class="ui action left icon input">
-                <div class="ui search">
+            <div class="ui action left icon input">
+              <div class="ui search">
                 <input class="prompt" type="text" placeholder="Disciplina...">
                 <div class="results"></div>
-            </div>
               </div>
+            </div>
           </div>
+        </div>
       </div>
+    </div>
+
+    <!-- MEIO -->
+
+    <div class="ui main text container" id="grafico" style="width:100%; height:400px;">
+      <h1 class="ui header">Gráficos</h1>
+
+      <a href="https://plot.ly/~7RodrigoAugusto/0/?share_key=NIOiI47kaBZJu7VofCmx8f" target="_blank" title="grouped-bar" style="display: block; text-align: center;"><img src="https://plot.ly/~7RodrigoAugusto/0.png?share_key=NIOiI47kaBZJu7VofCmx8f" alt="grouped-bar" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="7RodrigoAugusto:0" sharekey-plotly="NIOiI47kaBZJu7VofCmx8f" src="https://plot.ly/embed.js" async></script>
 
     </div>
-  </div>
-  <!-- MEIO -->
 
-  <div class="ui main text container">
-    <h1 class="ui header">Gráficos</h1>
-    <!-- Informacao -->
-    <div>
-  
-<script>	    
-d3.csv("/data/cities.csv", function(data) {
-  console.log(data[0]);
-});
-	
-</script>
-  
-<div>
-<a href="https://plot.ly/~7RodrigoAugusto/0/?share_key=NIOiI47kaBZJu7VofCmx8f" target="_blank" title="grouped-bar" style="display: block; text-align: center;"><img src="https://plot.ly/~7RodrigoAugusto/0.png?share_key=NIOiI47kaBZJu7VofCmx8f" alt="grouped-bar" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-<script data-plotly="7RodrigoAugusto:0" sharekey-plotly="NIOiI47kaBZJu7VofCmx8f" src="https://plot.ly/embed.js" async></script>
-</div>
+     <div id="fluxograma" style="width:100%; height:400px;">
+        <h1 class="ui header">Fluxograma</h1>
+        <script type="text/javascript" src="lib/script_fluxograma.js"></script>  
+      </div>           
 
- <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>	
-	    
-</div>
+      <div id="plot" style="width:100%; height:400px;"></div>
 
-  </div>
-
+          
 
   <!-- FOOTER -->
-
-   <div class="ui inverted red vertical footer segment">
-    <div class="ui center aligned container">
-      <div class="ui inverted section divider"></div>
-      <img src="image/ufpb_logo.png" class="ui centered mini image">
-      <div class="ui horizontal inverted small divided link list">
-        <a class="item" href="#">Site Map</a>
-        <a class="item" href="#">Contato</a>
+    <div class="ui inverted red vertical footer segment">
+      <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        <img src="image/ufpb_logo.png" class="ui centered mini image">
+        <div class="ui horizontal inverted small divided link list">
+          <a class="item" href="#">Site Map</a>
+          <a class="item" href="#">Contato</a>
+        </div>
       </div>
     </div>
-  </div>
-
-
-
- <!-- SCRIPT -->
-
-  <!-- SCRIPT PARA REALIZAR A TRANSIÇÃO ENTRE AS PÁGINAS -->
-    <script type="text/javascript">
-    $(document).ready(function() {
-            $("body").css("display", "none");
-            $("body").fadeIn(1000);
-    });
-    </script>
-
-    <script type="text/javascript">
-    $(document).ready(function() {
-      $("body").css("display", "none");
- 
-      $("body").fadeIn(1000);
- 
-      $("a.transition").click(function(event){
-          event.preventDefault();
-          linkLocation = this.href;
-          $("body").fadeOut(1000, redirectPage);      
-     });
-         
-    function redirectPage() {
-        window.location = linkLocation;
-    }
-});
-</script>
-
-
-  <!-- SCRIPT PARA REALIZAR BUSCAS NA PÁGINA-->
-   <script>
-
-    var content = [
-        {
-            title: 'Computador e Sociedade',
-            description: 'Descrição com a porcentagem de alunos',
-            image: "teste.jpg", 
-            url: "https://google.com"
-          },
-        {
-            title: 'Introdução à Computação Gráfica',
-            description: 'Descrição com a porcentagem de alunos',
-            url: "https://google.com"
-          }
-        ];
-
-      $('.ui.search')
-        <!-- apisettings -->
-          .search({
-            source: content,
-          })
-      ;
-
-      </script>
-	  
-<script>
- $(function () { 
-    var myChart = Highcharts.chart('container', {
-        chart: {
-            type: 'bar'
-        },
-        title: {
-            text: 'Mulheres x Homens - Concluintes'
-        },
-        xAxis: {
-            categories: ['2007', '2008', '2008','2009','2010','2011']
-        },
-        yAxis: {
-            title: {
-                text: 'Teste'
-            }
-        },
-        series: [{
-            name: 'Mulheres',
-            data: [29, 48, 85, 273, 1177]
-            animation: {
-                    duration: 1000
-            }
-        }, {
-            name: 'Homens',
-            data: [10, 15, 67, 169, 623]
-            animation: {
-                    duration: 1000
-                }
-        }]
-    });
-});
-</script>
-
 
   </body>
+    
+
 </html>
 
-	
+  
