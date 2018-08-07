@@ -38,77 +38,95 @@
 
 
   </head>
+    
 
-  <body style = "width:100%; height:100%;">
-    <!-- HEADER -->
-    <div class="ui fixed red inverted menu">
-      <div class="ui container">
-        <a href="http://www.ufpb.br" class="ui mini image"><img src="image/ufpb_logo.png"></a>
-        <a href="index.html" class="item">Página Inicial</a>
-        <a href="graficos.html" class="transition item"><i class="area chart icon"></i></a> <!-- Destaques da pesquisa -->
-        <a href="mulheres.html" class="transition item"><i class="female icon"></i></a>     <!-- Destaques dos mulheres-->
-        <a href="homens.html" class="transition item"><i class="male icon"></i></a>         <!-- Destaques dos homens  -->
-        <div class="ui simple dropdown item"> Extra <i class="dropdown icon"></i>
-          <div class="menu">
-            <a class="item" href="#">Universidade</a>
-            <a class="item" href="#">Centro de Informática</a>
-            <div class="divider"></div>
+<!-- HEADER -->
+      <!--<div class="ui fixed red inverted menu">-->
+      <div class="ui stackable container menu">
+        
+        <!-- Imagem -->
+        <div class="item">
+            <a href="http://www.ufpb.br" class="ui mini image"><img src="image/ufpb_logo.png"></a>
+          </div><!-- Fim imagem -->
+
+      <a href="index.html" class="item">Página Inicial</a>
+      <!-- Destaques da pesquisa -->
+      <a href="graficos.html" class="transition item"><i class="area chart icon"></i></a>
+      <!-- Destaques dos mulheres--> 
+      <a href="mulheres.html" class="transition item"><i class="female icon"></i></a>  
+      <!-- Destaques dos homens  -->   
+      <a href="homens.html" class="transition item"><i class="male icon"></i></a> 
+
+      <!-- Extra -->       
+      <div class="ui simple dropdown item"> Extra <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item" href="#">Universidade</a>
+          <a class="item" href="#">Centro de Informática</a>
+          <div class="divider"></div>
             <div class="header">Mulheres na Pesquisa</div>
             <div class="item">
-              <i class="dropdown icon"></i>
-              Sub Menu
-              <div class="menu">
-                <a class="item" href="#">Pesquisadoras Centro de Informática</a>
-                <a class="transition item" href="historia.html">História</a>
-              </div>
+            <i class="dropdown icon"></i>
+            Sub Menu
+            <div class="menu">
+              <a class="item" href="#">Pesquisadoras Centro de Informática</a>
+              <a class="transition item" href="historia.html">História</a>
             </div>
-            <a class="transition item" href="envolvidos.html">Envolvidos</a>            <!-- Alunos envolvidos na pesquisa  -->
-          </div>
-        </div>
-        <div class="center menu">
-          <div class="item">
-            <div class="ui action left icon input">
-              <div class="ui search">
-                <input class="prompt" type="text" placeholder="Disciplina...">
-                <div class="results"></div>
-              </div>
             </div>
+            <!-- Alunos envolvidos na pesquisa  -->
+            <a class="transition item" href="envolvidos.html">Envolvidos</a>            
           </div>
-        </div>
-      </div>
-    </div>
+      </div> <!-- Fim extra -->
 
+      <!-- Search  -->
+      <div class="center menu">
+        <div class="item">
+          <div class="ui action left icon input">
+          <div class="ui search">  
+            <div class="ui icon input">
+            <input class="prompt" type="text" placeholder="Pesquisa">
+              <i class="search icon"></i>
+              </div>
+               <div class="results"></div>
+          </div>
+          </div>
+        </div>
+      </div>  <!-- Fim search  -->
+
+      </div> <!-- Fecha MENU -->
+
+<script type="text/javascript" src="lib/script_search.js"></script>
     <!-- MEIO -->
 
+    <!-- Container -->
     <div class="ui main text container" id="grafico" style="width:100%; height:400px;">
       <h1 class="ui header">Gráficos</h1>
 
       <a href="https://plot.ly/~7RodrigoAugusto/0/?share_key=NIOiI47kaBZJu7VofCmx8f" target="_blank" title="grouped-bar" style="display: block; text-align: center;"><img src="https://plot.ly/~7RodrigoAugusto/0.png?share_key=NIOiI47kaBZJu7VofCmx8f" alt="grouped-bar" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="7RodrigoAugusto:0" sharekey-plotly="NIOiI47kaBZJu7VofCmx8f" src="https://plot.ly/embed.js" async></script>
 
-    </div>
 
-     <div id="fluxograma" style="width:100%; height:400px;">
+     <div id="fluxograma" style="width:100%; height:100px;">
         <h1 class="ui header">Fluxograma</h1>
         <script type="text/javascript" src="lib/script_fluxograma.js"></script>  
       </div>           
 
-      <div id="plot" style="width:100%; height:400px;"></div>
+      
+      </div> <!-- Fim Container-->
 
           
 
   <!-- FOOTER -->
-    <div class="ui inverted red vertical footer segment">
-      <div class="ui center aligned container">
-        <div class="ui inverted section divider"></div>
-        <img src="image/ufpb_logo.png" class="ui centered mini image">
-        <div class="ui horizontal inverted small divided link list">
-          <a class="item" href="#">Site Map</a>
-          <a class="item" href="#">Contato</a>
-        </div>
+  <!-- Container -->
+   <div class="ui inverted white vertical footer segment">
+    <div class="ui center aligned container">
+      <div class="ui inverted section divider"></div>
+      <img src="image/ufpb_logo.png" class="ui centered mini image">
+      <div class="ui horizontal inverted small divided link list">
+        <a class="item" href="#">Site Map</a>
+        <a class="item" href="envolvidos.html">Contato</a>
       </div>
     </div>
-
+  </div> <!-- Fim Container -->
   </body>
     
 
