@@ -29,13 +29,23 @@
 
 
 <!-- HEADER -->
-      <div class="ui fixed red inverted menu">
-      <div class="ui container">
-      <a href="http://www.ufpb.br" class="ui mini image"><img src="image/ufpb_logo.png"></a>
+      <!--<div class="ui fixed red inverted menu">-->
+      <div class="ui stackable container menu">
+        
+        <!-- Imagem -->
+        <div class="item">
+            <a href="http://www.ufpb.br" class="ui mini image"><img src="image/ufpb_logo.png"></a>
+          </div><!-- Fim imagem -->
+
       <a href="index.html" class="item">Página Inicial</a>
-      <a href="graficos.html" class="transition item"><i class="area chart icon"></i></a> <!-- Destaques da pesquisa -->
-      <a href="mulheres.html" class="transition item"><i class="female icon"></i></a>     <!-- Destaques dos mulheres-->
-      <a href="homens.html" class="transition item"><i class="male icon"></i></a>         <!-- Destaques dos homens  -->
+      <!-- Destaques da pesquisa -->
+      <a href="graficos.html" class="transition item"><i class="area chart icon"></i></a>
+      <!-- Destaques dos mulheres--> 
+      <a href="mulheres.html" class="transition item"><i class="female icon"></i></a>  
+      <!-- Destaques dos homens  -->   
+      <a href="homens.html" class="transition item"><i class="male icon"></i></a> 
+
+      <!-- Extra -->       
       <div class="ui simple dropdown item"> Extra <i class="dropdown icon"></i>
         <div class="menu">
           <a class="item" href="#">Universidade</a>
@@ -50,24 +60,32 @@
               <a class="transition item" href="historia.html">História</a>
             </div>
             </div>
-            <a class="transition item" href="envolvidos.html">Envolvidos</a>            <!-- Alunos envolvidos na pesquisa  -->
+            <!-- Alunos envolvidos na pesquisa  -->
+            <a class="transition item" href="envolvidos.html">Envolvidos</a>            
           </div>
-      </div>
+      </div> <!-- Fim extra -->
+
+      <!-- Search  -->
       <div class="center menu">
         <div class="item">
           <div class="ui action left icon input">
-          <div class="ui search">
-            <input class="prompt" type="text" placeholder="Disciplina...">
-              <div class="results"></div>
+          <div class="ui search">  
+            <div class="ui icon input">
+            <input class="prompt" type="text" placeholder="Pesquisa">
+              <i class="search icon"></i>
+              </div>
+               <div class="results"></div>
           </div>
           </div>
         </div>
-      </div>
+      </div>  <!-- Fim search  -->
 
-      </div>
-      </div>
-      
+      </div> <!-- Fecha MENU -->
+
+<script type="text/javascript" src="lib/script_search.js"></script>
+
   <!-- MEIO -->
+
 
   <div class="ui main text container">
     <h1 class="ui header">Homens 2007 - 2015</h1>
@@ -131,21 +149,22 @@
 
 
 
-  </div>
+  </div> <!-- Fim Container -->
 
 
   <!-- FOOTER -->
 
-   <div class="ui inverted red vertical footer segment">
+  <!-- Container -->
+   <div class="ui inverted white vertical footer segment">
     <div class="ui center aligned container">
       <div class="ui inverted section divider"></div>
       <img src="image/ufpb_logo.png" class="ui centered mini image">
       <div class="ui horizontal inverted small divided link list">
         <a class="item" href="#">Site Map</a>
-        <a class="item" href="#">Contato</a>
+        <a class="item" href="envolvidos.html">Contato</a>
       </div>
     </div>
-  </div>
+  </div> <!-- Fim Container -->
 
   </body>
 </html>
